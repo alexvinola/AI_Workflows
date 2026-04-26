@@ -1,0 +1,13 @@
+# IDEs (PyCharm, IntelliJ, etc.)
+.idea/
+*.iml
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# Sistema
+.DS_Store
+Thumbs.db
