@@ -10,9 +10,10 @@ Este repositorio documenta esa transición de forma pública y progresiva. No es
 
 El repo está organizado por niveles de sofisticación, siguiendo la escalera de workflows de IA. Cada nivel tiene su propia carpeta con un script autocontenido y un README que explica qué es, por qué funciona así y qué conceptos introduce.
 
-| Nivel | Nombre                            | Descripción |
-|-------|-----------------------------------|-------------|
-| L2 | [Chain determinista](./L2-chain/) | Llamadas encadenadas donde el flujo lo controla el código |
+| Nivel | Nombre | Descripción |
+|-------|--------|-------------|
+| L2 | [Chain determinista](./l2-chain/) | Llamadas encadenadas donde el flujo lo controla el código |
+| L3 | [Tool use](./l3-tool-use/) | El modelo decide cuándo invocar herramientas externas |
 
 > El repo se irá actualizando a medida que avance en el aprendizaje.
 
@@ -31,5 +32,6 @@ The repo is organized by sophistication levels, following the AI workflow ladder
 | Level | Name | Description |
 |-------|------|-------------|
 | L2 | [Deterministic chain](./l2-chain/) | Chained calls where the code controls the flow |
+| L3 | [Tool use](./l3-tool-use/) | The model decides when to invoke external tools |
 
 > The repo will be updated progressively as I advance in my learning.
