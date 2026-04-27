@@ -1,8 +1,9 @@
 [project]
 name = "ai-transition"
 version = "0.1.0"
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 dependencies = [
     "anthropic>=0.97.0",
+    "chromadb>=1.5.8",
     "httpx>=0.28.1",
 ]
