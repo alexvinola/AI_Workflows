@@ -14,6 +14,7 @@ El repo está organizado por niveles de sofisticación, siguiendo la escalera de
 |-------|--------|-------------|
 | L2 | [Chain determinista](./l2-chain/) | Llamadas encadenadas donde el flujo lo controla el código |
 | L3 | [Tool use](./l3-tool-use/) | El modelo decide cuándo invocar herramientas externas |
+| L4 | [RAG](./L4-RAG/) | Retrieval-Augmented Generation: el modelo responde sobre documentación real |
 
 > El repo se irá actualizando a medida que avance en el aprendizaje.
 
@@ -33,5 +34,6 @@ The repo is organized by sophistication levels, following the AI workflow ladder
 |-------|------|-------------|
 | L2 | [Deterministic chain](./l2-chain/) | Chained calls where the code controls the flow |
 | L3 | [Tool use](./l3-tool-use/) | The model decides when to invoke external tools |
+| L4 | [RAG](./L4-RAG/) | Retrieval-Augmented Generation: the model answers from real documentation |
 
 > The repo will be updated progressively as I advance in my learning.
