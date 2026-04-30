@@ -6,4 +6,5 @@ dependencies = [
     "anthropic>=0.97.0",
     "chromadb>=1.5.8",
     "httpx>=0.28.1",
+    "mcp>=1.27.0",
 ]

@@ -8,13 +8,17 @@ Este repositorio documenta esa transición de forma pública y progresiva. No es
 
 ### Estructura
 
-El repo está organizado por niveles de sofisticación, siguiendo la escalera de workflows de IA. Cada nivel tiene su propia carpeta con un script autocontenido y un README que explica qué es, por qué funciona así y qué conceptos introduce.
+El repo está organizado por niveles de sofisticación, siguiendo la escalera de workflows de IA. A mayor nivel, el modelo toma más decisiones por sí solo — y también aumenta la complejidad, el coste y la fragilidad. Cada nivel tiene su propia carpeta con un script autocontenido y un README que explica qué es, por qué funciona así y qué conceptos introduce.
 
-| Nivel | Nombre | Descripción |
-|-------|--------|-------------|
-| L2 | [Chain determinista](./l2-chain/) | Llamadas encadenadas donde el flujo lo controla el código |
-| L3 | [Tool use](./l3-tool-use/) | El modelo decide cuándo invocar herramientas externas |
-| L4 | [RAG](./L4-RAG/) | Retrieval-Augmented Generation: el modelo responde sobre documentación real |
+| Nivel | Nombre | Descripción | Estado |
+|-------|--------|-------------|--------|
+| L1 | Prompt simple | Una instrucción, una respuesta. Sin estado ni herramientas. | Conocimiento previo |
+| L2 | [Chain determinista](./l2-chain/) | Pasos encadenados con flujo fijo definido por el programador | ✅ Completado |
+| L3 | [Tool use](./l3-tool-use/) | El modelo decide cuándo invocar herramientas externas | ✅ Completado |
+| L4 | [RAG](./l4-rag/) | El modelo recupera contexto relevante antes de responder | ✅ Completado |
+| L5 | Agente | Bucle donde el modelo planifica, actúa y evalúa su progreso | 🔜 En progreso |
+| L6 | Multi-agente | Varios agentes especializados coordinados entre sí | 🔜 Pendiente |
+| L7 | [MCP](./l7-mcp/) | Protocolo estándar para exponer recursos y herramientas a cualquier cliente | ✅ Completado |
 
 > El repo se irá actualizando a medida que avance en el aprendizaje.
 
@@ -28,12 +32,16 @@ This repository documents that transition publicly and progressively. It is not 
 
 ### Structure
 
-The repo is organized by sophistication levels, following the AI workflow ladder. Each level has its own folder with a self-contained script and a README that explains what it is, why it works that way, and what concepts it introduces.
+The repo is organized by sophistication levels, following the AI workflow ladder. The higher the level, the more decisions the model makes on its own — and the higher the complexity, cost and fragility. Each level has its own folder with a self-contained script and a README that explains what it is, why it works that way, and what concepts it introduces.
 
-| Level | Name | Description |
-|-------|------|-------------|
-| L2 | [Deterministic chain](./l2-chain/) | Chained calls where the code controls the flow |
-| L3 | [Tool use](./l3-tool-use/) | The model decides when to invoke external tools |
-| L4 | [RAG](./L4-RAG/) | Retrieval-Augmented Generation: the model answers from real documentation |
+| Level | Name | Description | Status |
+|-------|------|-------------|--------|
+| L1 | Simple prompt | One instruction, one response. No state or tools. | Prior knowledge |
+| L2 | [Deterministic chain](./l2-chain/) | Chained steps with fixed flow defined by the programmer | ✅ Done |
+| L3 | [Tool use](./l3-tool-use/) | The model decides when to invoke external tools | ✅ Done |
+| L4 | [RAG](./l4-rag/) | The model retrieves relevant context before responding | ✅ Done |
+| L5 | Agent | Loop where the model plans, acts and evaluates its progress | 🔜 In progress |
+| L6 | Multi-agent | Multiple specialized agents coordinated with each other | 🔜 Pending |
+| L7 | [MCP](./l7-mcp/) | Standard protocol to expose resources and tools to any client | ✅ Done |
 
 > The repo will be updated progressively as I advance in my learning.
