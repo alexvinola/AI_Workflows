@@ -12,13 +12,13 @@ El repo está organizado por niveles de sofisticación, siguiendo la escalera de
 
 | Nivel | Nombre                            | Descripción | Estado |
 |-------|-----------------------------------|-------------|--------|
-| L1 | [Prompt simple](./l1-simple/)     | Una instrucción, una respuesta. Sin estado ni herramientas. | Conocimiento previo |
-| L2 | [Chain determinista](./l2-chain/) | Pasos encadenados con flujo fijo definido por el programador | ✅ Completado |
-| L3 | [Tool use](./l3-tool-use/)        | El modelo decide cuándo invocar herramientas externas | ✅ Completado |
-| L4 | [RAG](./l4-rag/)                  | El modelo recupera contexto relevante antes de responder | ✅ Completado |
-| L5 | [Agente](./l5-agent/)             | Bucle donde el modelo planifica, actúa y evalúa su progreso | 🔜 En progreso |
-| L6 | [Multi-agente](./l6-multi_agent/) | Varios agentes especializados coordinados entre sí | 🔜 Pendiente |
-| L7 | [MCP](./l7-mcp/)                  | Protocolo estándar para exponer recursos y herramientas a cualquier cliente | ✅ Completado |
+| L1 | [Prompt simple](./L1-SIMPLE/)     | Una instrucción, una respuesta. Sin estado ni herramientas. | Conocimiento previo |
+| L2 | [Chain determinista](./L2-CHAIN/) | Pasos encadenados con flujo fijo definido por el programador | ✅ Completado |
+| L3 | [Tool use](./L4-TOOL_USE/)        | El modelo decide cuándo invocar herramientas externas | ✅ Completado |
+| L4 | [RAG](./L4-RAG/)                  | El modelo recupera contexto relevante antes de responder | ✅ Completado |
+| L5 | [Agente](./L5-AGENT/)             | Bucle donde el modelo planifica, actúa y evalúa su progreso | 🔜 En progreso |
+| L6 | [Multi-agente](./L6-MULTI_AGENT/) | Varios agentes especializados coordinados entre sí | 🔜 Pendiente |
+| L7 | [MCP](./L7-MCP/)                  | Protocolo estándar para exponer recursos y herramientas a cualquier cliente | ✅ Completado |
 
 > El repo se irá actualizando a medida que avance en el aprendizaje.
 
@@ -36,12 +36,12 @@ The repo is organized by sophistication levels, following the AI workflow ladder
 
 | Level | Name                               | Description | Status |
 |-------|------------------------------------|-------------|--------|
-| L1 | [Simple prompt](./l1-simple/)      | One instruction, one response. No state or tools. | Prior knowledge |
-| L2 | [Deterministic chain](./l2-chain/) | Chained steps with fixed flow defined by the programmer | ✅ Done |
-| L3 | [Tool use](./l3-tool-use/)         | The model decides when to invoke external tools | ✅ Done |
-| L4 | [RAG](./l4-rag/)                   | The model retrieves relevant context before responding | ✅ Done |
-| L5 | [Agent](./l5-agent/)               | Loop where the model plans, acts and evaluates its progress | 🔜 In progress |
-| L6 | [Multi-agent](./l6-multi_agent/)   | Multiple specialized agents coordinated with each other | 🔜 Pending |
-| L7 | [MCP](./l7-mcp/)                   | Standard protocol to expose resources and tools to any client | ✅ Done |
+| L1 | [Simple prompt](./L1-SIMPLE/)      | One instruction, one response. No state or tools. | Prior knowledge |
+| L2 | [Deterministic chain](./L2-CHAIN/) | Chained steps with fixed flow defined by the programmer | ✅ Done |
+| L3 | [Tool use](./L3-TOOL_USE/)         | The model decides when to invoke external tools | ✅ Done |
+| L4 | [RAG](./L4-RAG/)                   | The model retrieves relevant context before responding | ✅ Done |
+| L5 | [Agent](./L5-AGENT/)               | Loop where the model plans, acts and evaluates its progress | 🔜 In progress |
+| L6 | [Multi-agent](./L6-MULTI_AGENT/)   | Multiple specialized agents coordinated with each other | 🔜 Pending |
+| L7 | [MCP](./L7-MCP/)                   | Standard protocol to expose resources and tools to any client | ✅ Done |
 
 > The repo will be updated progressively as I advance in my learning.
