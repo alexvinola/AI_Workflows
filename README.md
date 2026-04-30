@@ -10,15 +10,15 @@ Este repositorio documenta esa transición de forma pública y progresiva. No es
 
 El repo está organizado por niveles de sofisticación, siguiendo la escalera de workflows de IA. A mayor nivel, el modelo toma más decisiones por sí solo — y también aumenta la complejidad, el coste y la fragilidad. Cada nivel tiene su propia carpeta con un script autocontenido y un README que explica qué es, por qué funciona así y qué conceptos introduce.
 
-| Nivel | Nombre | Descripción | Estado |
-|-------|--------|-------------|--------|
-| L1 | Prompt simple | Una instrucción, una respuesta. Sin estado ni herramientas. | Conocimiento previo |
+| Nivel | Nombre                            | Descripción | Estado |
+|-------|-----------------------------------|-------------|--------|
+| L1 | [Prompt simple](./l1-simple/)     | Una instrucción, una respuesta. Sin estado ni herramientas. | Conocimiento previo |
 | L2 | [Chain determinista](./l2-chain/) | Pasos encadenados con flujo fijo definido por el programador | ✅ Completado |
-| L3 | [Tool use](./l3-tool-use/) | El modelo decide cuándo invocar herramientas externas | ✅ Completado |
-| L4 | [RAG](./l4-rag/) | El modelo recupera contexto relevante antes de responder | ✅ Completado |
-| L5 | Agente | Bucle donde el modelo planifica, actúa y evalúa su progreso | 🔜 En progreso |
-| L6 | Multi-agente | Varios agentes especializados coordinados entre sí | 🔜 Pendiente |
-| L7 | [MCP](./l7-mcp/) | Protocolo estándar para exponer recursos y herramientas a cualquier cliente | ✅ Completado |
+| L3 | [Tool use](./l3-tool-use/)        | El modelo decide cuándo invocar herramientas externas | ✅ Completado |
+| L4 | [RAG](./l4-rag/)                  | El modelo recupera contexto relevante antes de responder | ✅ Completado |
+| L5 | [Agente](./l5-agent/)             | Bucle donde el modelo planifica, actúa y evalúa su progreso | 🔜 En progreso |
+| L6 | [Multi-agente](./l6-multi_agent/) | Varios agentes especializados coordinados entre sí | 🔜 Pendiente |
+| L7 | [MCP](./l7-mcp/)                  | Protocolo estándar para exponer recursos y herramientas a cualquier cliente | ✅ Completado |
 
 > El repo se irá actualizando a medida que avance en el aprendizaje.
 
