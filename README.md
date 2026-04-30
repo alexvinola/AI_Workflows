@@ -1,4 +1,4 @@
-# AI Transition
+# AI Workflows
 
 ## Español
 
