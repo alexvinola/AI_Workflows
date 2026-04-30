@@ -34,14 +34,14 @@ This repository documents that transition publicly and progressively. It is not 
 
 The repo is organized by sophistication levels, following the AI workflow ladder. The higher the level, the more decisions the model makes on its own — and the higher the complexity, cost and fragility. Each level has its own folder with a self-contained script and a README that explains what it is, why it works that way, and what concepts it introduces.
 
-| Level | Name | Description | Status |
-|-------|------|-------------|--------|
-| L1 | Simple prompt | One instruction, one response. No state or tools. | Prior knowledge |
+| Level | Name                               | Description | Status |
+|-------|------------------------------------|-------------|--------|
+| L1 | [Simple prompt](./l1-simple/)      | One instruction, one response. No state or tools. | Prior knowledge |
 | L2 | [Deterministic chain](./l2-chain/) | Chained steps with fixed flow defined by the programmer | ✅ Done |
-| L3 | [Tool use](./l3-tool-use/) | The model decides when to invoke external tools | ✅ Done |
-| L4 | [RAG](./l4-rag/) | The model retrieves relevant context before responding | ✅ Done |
-| L5 | Agent | Loop where the model plans, acts and evaluates its progress | 🔜 In progress |
-| L6 | Multi-agent | Multiple specialized agents coordinated with each other | 🔜 Pending |
-| L7 | [MCP](./l7-mcp/) | Standard protocol to expose resources and tools to any client | ✅ Done |
+| L3 | [Tool use](./l3-tool-use/)         | The model decides when to invoke external tools | ✅ Done |
+| L4 | [RAG](./l4-rag/)                   | The model retrieves relevant context before responding | ✅ Done |
+| L5 | [Agent](./l5-agent/)               | Loop where the model plans, acts and evaluates its progress | 🔜 In progress |
+| L6 | [Multi-agent](./l6-multi_agent/)   | Multiple specialized agents coordinated with each other | 🔜 Pending |
+| L7 | [MCP](./l7-mcp/)                   | Standard protocol to expose resources and tools to any client | ✅ Done |
 
 > The repo will be updated progressively as I advance in my learning.
