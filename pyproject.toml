@@ -6,7 +6,9 @@ dependencies = [
     "anthropic>=0.97.0",
     "chromadb>=1.5.8",
     "httpx>=0.28.1",
+    "ipykernel>=7.2.0",
     "mcp>=1.27.0",
     "python-dotenv>=1.2.2",
+    "retriever>=3.1.0",
     "sentence-transformers>=5.4.1",
 ]

@@ -8,17 +8,24 @@ Este repositorio documenta esa transición de forma pública y progresiva. No es
 
 ### Estructura
 
-El repo está organizado por niveles de sofisticación, siguiendo la escalera de workflows de IA. A mayor nivel, el modelo toma más decisiones por sí solo — y también aumenta la complejidad, el coste y la fragilidad. Cada nivel tiene su propia carpeta con un script autocontenido y un README que explica qué es, por qué funciona así y qué conceptos introduce.
+El repo está organizado por niveles de sofisticación, siguiendo la escalera de workflows de IA. A mayor nivel, el modelo toma más decisiones por sí solo — y también aumenta la complejidad, el coste y la fragilidad. Cada nivel es un **notebook Jupyter autocontenido** que explica los conceptos, muestra el código y se puede ejecutar de principio a fin.
 
-| Nivel | Nombre                            | Descripción | Estado |
-|-------|-----------------------------------|-------------|--------|
-| L1 | [Prompt simple](./L1-SIMPLE/)     | Una instrucción, una respuesta. Sin estado ni herramientas. | Conocimiento previo |
-| L2 | [Chain determinista](./L2-CHAIN/) | Pasos encadenados con flujo fijo definido por el programador | ✅ Completado |
-| L3 | [Tool use](./L4-TOOL_USE/)        | El modelo decide cuándo invocar herramientas externas | ✅ Completado |
-| L4 | [RAG](./L4-RAG/)                  | El modelo recupera contexto relevante antes de responder | ✅ Completado |
-| L5 | [Agente](./L5-AGENT/)             | Bucle donde el modelo planifica, actúa y evalúa su progreso | ✅ Completado |
-| L6 | [Multi-agente](./L6-MULTI_AGENT/) | Varios agentes especializados coordinados entre sí | ✅ Completado |
-| L7 | [MCP](./L7-MCP/)                  | Protocolo estándar para exponer recursos y herramientas a cualquier cliente | ✅ Completado |
+| Nivel | Nombre                                                                  | Descripción | Estado |
+|-------|-------------------------------------------------------------------------|-------------|--------|
+| L1 | [Prompt simple](./L1-SIMPLE/L1_Simple_LLM_Call.ipynb)                   | Una instrucción, una respuesta. Sin estado ni herramientas. | Conocimiento previo |
+| L2 | [Chain determinista](./L2-CHAIN/L2_Chain_Determinista.ipynb)            | Pasos encadenados con flujo fijo definido por el programador | ✅ Completado |
+| L3 | [Tool use](./L3-TOOL_USE/L3_Tool_Use.ipynb)                             | El modelo decide cuándo invocar herramientas externas | ✅ Completado |
+| L4 | [RAG](./L4-RAG/L4_RAG.ipynb)                                            | El modelo recupera contexto relevante antes de responder | ✅ Completado |
+| L5 | [Agente](./L5-AGENT/L5_Agente.ipynb)                                    | Bucle donde el modelo planifica, actúa y evalúa su progreso | ✅ Completado |
+| L6 | [Multi-agente](./L6-MULTI_AGENT/L6_Multi_Agent.ipynb)                   | Varios agentes especializados coordinados entre sí | ✅ Completado |
+| L7 | [MCP](./L7-MCP/L7_MCP.ipynb)                                            | Protocolo estándar para exponer recursos y herramientas a cualquier cliente | ✅ Completado |
+
+### Requisitos
+
+```bash
+pip install anthropic chromadb sentence-transformers mcp python-dotenv
+export ANTHROPIC_API_KEY="sk-ant-..."   # o usa un fichero .env en la raíz
+```
 
 > El repo se irá actualizando a medida que avance en el aprendizaje.
 
@@ -32,16 +39,23 @@ This repository documents that transition publicly and progressively. It is not 
 
 ### Structure
 
-The repo is organized by sophistication levels, following the AI workflow ladder. The higher the level, the more decisions the model makes on its own — and the higher the complexity, cost and fragility. Each level has its own folder with a self-contained script and a README that explains what it is, why it works that way, and what concepts it introduces.
+The repo is organized by sophistication levels, following the AI workflow ladder. The higher the level, the more decisions the model makes on its own — and the higher the complexity, cost and fragility. Each level is a **self-contained Jupyter notebook** that explains the concepts, shows the code and can be run end-to-end.
 
-| Level | Name                               | Description | Status |
-|-------|------------------------------------|-------------|--------|
-| L1 | [Simple prompt](./L1-SIMPLE/)      | One instruction, one response. No state or tools. | Prior knowledge |
-| L2 | [Deterministic chain](./L2-CHAIN/) | Chained steps with fixed flow defined by the programmer | ✅ Done |
-| L3 | [Tool use](./L3-TOOL_USE/)         | The model decides when to invoke external tools | ✅ Done |
-| L4 | [RAG](./L4-RAG/)                   | The model retrieves relevant context before responding | ✅ Done |
-| L5 | [Agent](./L5-AGENT/)               | Loop where the model plans, acts and evaluates its progress | ✅ Done |
-| L6 | [Multi-agent](./L6-MULTI_AGENT/)   | Multiple specialized agents coordinated with each other | ✅ Done |
-| L7 | [MCP](./L7-MCP/)                   | Standard protocol to expose resources and tools to any client | ✅ Done |
+| Level | Name                                                                      | Description | Status |
+|-------|---------------------------------------------------------------------------|-------------|--------|
+| L1 | [Simple prompt](./L1-SIMPLE/L1_Simple_LLM_Call.ipynb)                     | One instruction, one response. No state or tools. | Prior knowledge |
+| L2 | [Deterministic chain](./L2-CHAIN/L2_Chain_Determinista.ipynb)             | Chained steps with fixed flow defined by the programmer | ✅ Done |
+| L3 | [Tool use](./L3-TOOL_USE/L3_Tool_Use.ipynb)                               | The model decides when to invoke external tools | ✅ Done |
+| L4 | [RAG](./L4-RAG/L4_RAG.ipynb)                                              | The model retrieves relevant context before responding | ✅ Done |
+| L5 | [Agent](./L5-AGENT/L5_Agente.ipynb)                                       | Loop where the model plans, acts and evaluates its progress | ✅ Done |
+| L6 | [Multi-agent](./L6-MULTI_AGENT/L6_Multi_Agent.ipynb)                      | Multiple specialized agents coordinated with each other | ✅ Done |
+| L7 | [MCP](./L7-MCP/L7_MCP.ipynb)                                              | Standard protocol to expose resources and tools to any client | ✅ Done |
+
+### Requirements
+
+```bash
+pip install anthropic chromadb sentence-transformers mcp python-dotenv
+export ANTHROPIC_API_KEY="sk-ant-..."   # or use a .env file at the repo root
+```
 
 > The repo will be updated progressively as I advance in my learning.
