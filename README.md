@@ -16,8 +16,8 @@ El repo está organizado por niveles de sofisticación, siguiendo la escalera de
 | L2 | [Chain determinista](./L2-CHAIN/) | Pasos encadenados con flujo fijo definido por el programador | ✅ Completado |
 | L3 | [Tool use](./L4-TOOL_USE/)        | El modelo decide cuándo invocar herramientas externas | ✅ Completado |
 | L4 | [RAG](./L4-RAG/)                  | El modelo recupera contexto relevante antes de responder | ✅ Completado |
-| L5 | [Agente](./L5-AGENT/)             | Bucle donde el modelo planifica, actúa y evalúa su progreso | 🔜 En progreso |
-| L6 | [Multi-agente](./L6-MULTI_AGENT/) | Varios agentes especializados coordinados entre sí | 🔜 Pendiente |
+| L5 | [Agente](./L5-AGENT/)             | Bucle donde el modelo planifica, actúa y evalúa su progreso | ✅ Completado |
+| L6 | [Multi-agente](./L6-MULTI_AGENT/) | Varios agentes especializados coordinados entre sí | ✅ Completado |
 | L7 | [MCP](./L7-MCP/)                  | Protocolo estándar para exponer recursos y herramientas a cualquier cliente | ✅ Completado |
 
 > El repo se irá actualizando a medida que avance en el aprendizaje.
@@ -40,8 +40,8 @@ The repo is organized by sophistication levels, following the AI workflow ladder
 | L2 | [Deterministic chain](./L2-CHAIN/) | Chained steps with fixed flow defined by the programmer | ✅ Done |
 | L3 | [Tool use](./L3-TOOL_USE/)         | The model decides when to invoke external tools | ✅ Done |
 | L4 | [RAG](./L4-RAG/)                   | The model retrieves relevant context before responding | ✅ Done |
-| L5 | [Agent](./L5-AGENT/)               | Loop where the model plans, acts and evaluates its progress | 🔜 In progress |
-| L6 | [Multi-agent](./L6-MULTI_AGENT/)   | Multiple specialized agents coordinated with each other | 🔜 Pending |
+| L5 | [Agent](./L5-AGENT/)               | Loop where the model plans, acts and evaluates its progress | ✅ Done |
+| L6 | [Multi-agent](./L6-MULTI_AGENT/)   | Multiple specialized agents coordinated with each other | ✅ Done |
 | L7 | [MCP](./L7-MCP/)                   | Standard protocol to expose resources and tools to any client | ✅ Done |
 
 > The repo will be updated progressively as I advance in my learning.
