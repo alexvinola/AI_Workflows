@@ -15,6 +15,9 @@ Variables de entorno:
     ANTHROPIC_API_KEY — tu clave de API de Anthropic
 """
 
+from dotenv import load_dotenv
+load_dotenv()
+
 import os
 import json
 import anthropic

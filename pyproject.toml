@@ -7,6 +7,6 @@ dependencies = [
     "chromadb>=1.5.8",
     "httpx>=0.28.1",
     "mcp>=1.27.0",
+    "python-dotenv>=1.2.2",
+    "sentence-transformers>=5.4.1",
 ]
-[tool.uv]
-env-file = ".env"

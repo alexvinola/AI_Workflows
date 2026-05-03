@@ -22,6 +22,8 @@ Uso:
     (arranca server.py automáticamente como subproceso)
 """
 
+from dotenv import load_dotenv
+load_dotenv()
 import asyncio
 import json
 import anthropic

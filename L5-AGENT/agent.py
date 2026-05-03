@@ -18,6 +18,8 @@ Variables de entorno:
     ANTHROPIC_API_KEY
 """
 
+from dotenv import load_dotenv
+load_dotenv()
 import json
 import anthropic
 
@@ -25,6 +27,17 @@ client = anthropic.Anthropic()
 MODEL          = "claude-sonnet-4-5"
 MAX_ITERATIONS = 10  # techo de seguridad — si se alcanza, algo ha ido mal
 
+def parse_json_safe(text: str) -> dict:
+    import re
+    # Busca JSON dentro de ```json ... ``` o ``` ... ```
+    match = re.search(r"```(?:json)?\s*([\s\S]*?)```", text)
+    if match:
+        return json.loads(match.group(1).strip())
+    # Si no hay backticks, busca directamente el primer {
+    match = re.search(r"\{[\s\S]*\}", text)
+    if match:
+        return json.loads(match.group(0))
+    return json.loads(text.strip())
 
 # ─────────────────────────────────────────────
 # Definición de tools
@@ -415,8 +428,9 @@ def run_agent(report: str) -> dict:
 
         # El agente ha decidido que el objetivo está completo
         if response.stop_reason == "end_turn":
-            text = next(b.text for b in response.content if b.type == "text")
-            result = json.loads(text.strip())
+            text = next((b.text for b in response.content if b.type == "text"), "")
+            print("DEBUG raw:", repr(text))  # añade esto
+            result = parse_json_safe(text)
             print("\n" + "=" * 60)
             print("INFORME FINAL:")
             print(json.dumps(result, ensure_ascii=False, indent=2))

@@ -22,6 +22,8 @@ Variables de entorno:
     ANTHROPIC_API_KEY
 """
 
+from dotenv import load_dotenv
+load_dotenv()
 import asyncio
 import json
 import anthropic
@@ -30,6 +32,16 @@ client               = anthropic.AsyncAnthropic()
 ORCHESTRATOR_MODEL   = "claude-sonnet-4-5"
 SPECIALIST_MODEL     = "claude-haiku-4-5-20251001"
 MAX_ITERATIONS       = 8
+
+def parse_json_safe(text: str) -> dict:
+    import re
+    match = re.search(r"```(?:json)?\s*([\s\S]*?)```", text)
+    if match:
+        return json.loads(match.group(1).strip())
+    match = re.search(r"\{[\s\S]*\}", text)
+    if match:
+        return json.loads(match.group(0))
+    return json.loads(text.strip())
 
 
 # ─────────────────────────────────────────────
@@ -424,8 +436,9 @@ async def run_specialist(domain: str, task: str, tools: list) -> dict:
         )
 
         if response.stop_reason == "end_turn":
-            text   = next(b.text for b in response.content if b.type == "text")
-            result = json.loads(text.strip())
+            text = next((b.text for b in response.content if b.type == "text"), "")
+            print("DEBUG raw:", repr(text))  # añade esto
+            result = parse_json_safe(text)
             print(f"  [{domain.upper()}] Completado — severidad: {result.get('severity', '?')}")
             return result
 
@@ -498,7 +511,7 @@ async def decompose(incident: str) -> dict:
         }]
     )
     text = next(b.text for b in response.content if b.type == "text")
-    return json.loads(text.strip())
+    return parse_json_safe(text)
 
 
 async def synthesize(incident: str, specialist_reports: list[dict]) -> dict:
@@ -520,7 +533,7 @@ async def synthesize(incident: str, specialist_reports: list[dict]) -> dict:
         }]
     )
     text = next(b.text for b in response.content if b.type == "text")
-    return json.loads(text.strip())
+    return parse_json_safe(text)
 
 
 SPECIALIST_TOOLS = {

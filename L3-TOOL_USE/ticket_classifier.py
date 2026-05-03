@@ -19,6 +19,9 @@ Variables de entorno:
     ANTHROPIC_API_KEY
 """
 
+from dotenv import load_dotenv
+load_dotenv()
+
 import os
 import json
 import anthropic
@@ -34,6 +37,17 @@ MODEL  = "claude-sonnet-4-5"
 # Una descripción vaga = el modelo no sabe cuándo usarla.
 # Una descripción precisa = el modelo la usa en el momento correcto.
 # ─────────────────────────────────────────────
+
+def parse_json_safe(text: str) -> dict:
+    """
+    Parsea JSON de forma segura.
+    Los LLMs a veces envuelven la respuesta en ```json ... ```.
+    """
+    cleaned = text.strip()
+    if cleaned.startswith("```"):
+        lines = cleaned.split("\n")
+        cleaned = "\n".join(lines[1:-1])
+    return json.loads(cleaned)
 
 TOOLS = [
     {
@@ -61,7 +75,7 @@ TOOLS = [
     {
         "name": "get_system_status",
         "description": (
-            "Get the current status of the system services. "
+            "Get the current status of a service. Use this ONLY when the ticket explicitly mentions a service being down or returning errors in production. Do not use for UI or display issues."
             "Use this when the ticket mentions a service being down or degraded, "
             "to check if there is an active incident before classifying severity."
         ),
@@ -217,8 +231,9 @@ def run_agent(ticket: str) -> dict:
 
         # El modelo ha terminado — respuesta final
         if response.stop_reason == "end_turn":
-            text = next(b.text for b in response.content if b.type == "text")
-            result = json.loads(text.strip())
+            text = next((b.text for b in response.content if b.type == "text"), "")
+            print("DEBUG raw:", repr(text))  # añade esto
+            result = parse_json_safe(text)
             print("\n" + "=" * 60)
             print("RESULTADO FINAL:")
             print(json.dumps(result, ensure_ascii=False, indent=2))

@@ -11,3 +11,5 @@ venv/
 # Sistema
 .DS_Store
 Thumbs.db
+/L4-RAG/chroma_db/
+/L7-MCP/tickets.db
